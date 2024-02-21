@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "zuaguiweb": {
+      "hosting": {
+        "zuhaguiWeb": [
+          "zuaguiweb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "zuaguiweb"
+  }
+}

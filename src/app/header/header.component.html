@@ -1,0 +1,82 @@
+<nav
+  id="navbar"
+  class="p-5 top-0 xl:pl-16 xl:pr-16 marker: flex items-center justify-between w-full z-20 fixed transition-all duration-100 bgwhite"
+>
+  <!-- logo -->
+  <div id="logo" class="max-w-[200px]">
+    <img src="../../assets/ima/logoArboll.png" alt="Logo" id="ima" />
+  </div>
+  <!-- control abrir cerrar menu sm-screen -->
+  <input type="checkbox" id="menu" class="peer hidden" />
+  <label
+    for="menu"
+    class="bg-open-menu w-6 h-5 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 lg:hidden"
+  ></label>
+  <div
+    class="fixed inset-0 bg-white translate-x-full peer-checked:translate-x-0 transition-transform lg:static lg:translate-x-0 lg:bg-transparent"
+    style="background-color: rgb(255, 255, 255)"
+  >
+    <!-- inicio menu -->
+    <ul
+      class="absolute inset-x-0 top-6 p-12 bg-transparent mx-auto rounded-md h-max text-center text-xl tracking-wider items-center grid gap-6 font-extrabold lg:w-max lg:bg-transparent lg:p-0 lg:grid-flow-col lg:static lg:text-sm lg:pr-6"
+    >
+      <!-- logo -->
+      <li class="md:hidden">
+        <div class="max-w-[200px] flex justify-center m-auto mb-10">
+          <img src="../../assets/ima/logoArboll.png" alt="Logo" />
+        </div>
+      </li>
+      <!-- links -->
+      <li *ngFor="let link of links">
+        <a
+          href="#"
+          data-te-toggle="modal"
+          [attr.data-te-target]="'#' + link.link"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          class="hover:text-orange-700 hover:border-b-2 hover:border-orange-700 hover:transition hover:duration-1000 p-5"
+          >{{ link.name }}</a
+        >
+      </li>
+      <!-- redes sociales -->
+      <li>
+        <div class="flex justify-center gap-4 mt-10 md:mt-auto">
+          <a
+            href="https://www.facebook.com/profile.php?id=100063045589994" target="_blank"
+            class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat rounded-full shadow-lg"
+          >
+            <img
+              src="../../assets/ima/icon-facebook.png"
+              alt=""
+              class="max-w-[50px] transition duration-300 ease-in-out hover:scale-90 hover:border-gray-600 hover:border-2 rounded-full"
+              id="face"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/servicios_agricolas_zuhagui" target="_blank"
+            class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat rounded-full shadow-lg"
+          >
+            <img
+              src="../../assets/ima/icon-instagram.png"
+              alt=""
+              class="max-w-[50px] transition duration-300 ease-in-out hover:scale-90 hover:border-gray-600 hover:border-2 rounded-full"
+              id="inst"
+            />
+          </a>
+          <a
+            href="https://wa.me/34628202022" target="_blank"
+            class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat rounded-full shadow-lg"
+          >
+            <img
+              src="../../assets/ima/icon-wasa.png"
+              alt=""
+              class="max-w-[50px] transition duration-300 ease-in-out hover:scale-90 hover:border-gray-600 hover:border-2 rounded-full"
+              id="wasa"
+            />
+          </a>
+        </div>
+      </li>
+    </ul>
+    <!-- fin menu -->
+  </div>
+</nav>

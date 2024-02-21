@@ -1,0 +1,26 @@
+.responsive-wrapper {
+  width: 90%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-outer {
+  height: var(--banner-outer-height);
+  position: sticky;
+  top: calc(var(--banner-height-difference) * -1);
+  display: flex;
+  align-items: center;
+  background-color: var(--banner-bg);
+  z-index: 1;
+}
+
+.banner-inner {
+  height: var(--banner-inner-height);
+  position: sticky;
+  top: 0;
+}
+
+.bgwhite {
+  background-color: #ffffff;
+}

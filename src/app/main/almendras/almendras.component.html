@@ -1,0 +1,94 @@
+<section
+  class="p-7 pt-16 pb-28 bg-cover flex flex-col justify-center bg-left-top bg-fixed text-white relative overflow-hidden"
+  style="background-image: url('../../../assets/ima/almendrosblack.jpg')"
+>
+  <div class="absolute top-0 left-0 w-full h-full bg-black/10 z-0"></div>
+  <div
+    class="grid grid-cols-1 xl:grid-cols-2 gap-x-4 mx-auto z-10"
+  >
+  <div class="lg:col-span-2" data-aos="fade-down" data-aos-duration="1000">
+    <h1 class="name font-bold pb-8">Recogida de almendras</h1>
+  </div>
+    <div class="" data-aos="fade-down" data-aos-duration="1000">
+      <p class="flex m-auto justify-center text-lg max-w-[500px] pb-10">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, rem.
+        Sunt voluptate ullam minima eligendi tempora vitae suscipit soluta animi
+        nisi commodi?
+      </p>
+    </div>
+    <div></div>
+    <div
+      class="block relative m-auto max-w-[500px] rounded rounded-b-none bg-black p-1"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <video
+        [attr.src]="videdo"
+        class="w-full m-auto shadow-lg"
+        loop
+        [autoplay]="play"
+        controls
+        muted
+      >
+        <source type="video/mp4" />
+      </video>
+      <p class="text-white text-center p-3">TV<span class="text-sm pl-3">{{ namevideo }}</span></p>
+    </div>
+    <div class="" data-aos="fade-left" data-aos-duration="1000">
+      <div class="grid grid-cols-2 w-full max-w-[500px]">
+        <div
+          class="block m-auto rounded rounded-t-none rounded-r-none bg-black p-1"
+        >
+          <div
+            class="rounded w-full relative cursor-pointer"
+            (click)="video('clip-1')"
+          >
+            <img src="../../../assets/ima/cl-1.png" alt="image" />
+            <div
+              class="absolute top-0 left-0 w-full h-full hover:bg-black/30 text-black hover:text-white"
+              style="transition: all 0.3s ease-out"
+            >
+              <span
+                class="material-symbols-outlined relative h-full bg-slate-200/50 flex justify-center items-center text-6xl hover:text-white"
+              >
+                play_circle
+              </span>
+            </div>
+          </div>
+          <p class="p-2 text-sm text-white text-center">VIDEO 1</p>
+        </div>
+        <div
+          class="block m-auto rounded rounded-t-none rounded-l-none bg-black p-1"
+        >
+          <div
+            class="rounded w-full relative cursor-pointer"
+            (click)="video('clip-2')"
+          >
+            <img src="../../../assets/ima/cl-2.png" alt="image" />
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-slate-200/50 hover:bg-black/30 text-black hover:text-white"
+              style="transition: all 0.3s ease-out"
+            >
+              <span
+                class="material-symbols-outlined relative h-full flex justify-center items-center text-6xl hover:text-white"
+              >
+                play_circle
+              </span>
+            </div>
+          </div>
+          <p class="p-2 text-sm text-white text-center">VIDEO 2</p>
+        </div>
+        <div class="flex">
+          <a
+            href="#"
+            (click)="toggleModal('almendras')"
+            class="flex-none w-fit mt-9 text-center bg-black/50 border border-white py-4 px-8 text-white font-bold uppercase text-xs tracking-wider hover:bg-gray-200 hover:text-gray-800"
+            >Almendras</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section></section>
